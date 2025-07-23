@@ -78,7 +78,6 @@ Use this project as a reference for integrating Swift and Python, developing bot
 
 ---
 
-### A versatile hybrid project showcasing best practices, suitable for both iOS and backend development endeavors.
 
 ---
 ``
