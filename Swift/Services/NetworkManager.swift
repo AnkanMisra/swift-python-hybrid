@@ -1,5 +1,6 @@
 import Foundation
 import Combine
+import SystemConfiguration
 
 
 class NetworkManager: ObservableObject {
@@ -298,8 +299,12 @@ class NetworkManager: ObservableObject {
     
     
     func updateApiKey(_ newKey: String) {
+        let oldKey = self.apiKey
         
+        let newManager = NetworkManager()
+        newManager.apiKey = newKey
         
+        Logger.shared.info("API key updated from \(oldKey.prefix(4))... to \(newKey.prefix(4))...")
     }
     
     func refreshToken() -> AnyPublisher<String, NetworkError> {
